@@ -1,7 +1,6 @@
 // todo: hacer el front de la calculadora
 const process =require ('process')
 const {argv} =process 
-const comando= argv[2]
 function calculadora(comando){
 switch (comando.toLowerCase()) {
     case "sumar":
@@ -17,4 +16,4 @@ switch (comando.toLowerCase()) {
         break;
 }
 }
-console.log(calculadora);
+console.log(calculadora(argv[2]));
