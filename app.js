@@ -1,12 +1,15 @@
 // todo: hacer el front de la calculadora
 const process =require ('process')
+const resta=require('./restar')
+//const suma= require('./sumar')
 const {argv} =process 
-function calculadora(comando){
-switch (comando.toLowerCase()) {
+function calculadora(comando,a,b){
+switch (comando) {
     case "sumar":
-        
+        return suma(a,b)
         break;
     case "restar":
+        return resta(a,b)
         break
     case "multiplicar":
         break
@@ -16,4 +19,4 @@ switch (comando.toLowerCase()) {
         break;
 }
 }
-console.log(calculadora(argv[2], argv[3],argv[4]));
+console.log(calculadora(argv[2], +argv[3],+argv[4]));
