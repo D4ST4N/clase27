@@ -2,7 +2,6 @@
 const process =require ('process')
 const resta=require('./restar')
 const suma= require('./sumar')
-const multiplicar= require('./multiplicar')
 const {argv} =process 
 function calculadora(comando,a,b){
 switch (comando.toLowerCase()) {
@@ -13,8 +12,10 @@ switch (comando.toLowerCase()) {
         return resta(a,b)
         break
     case "multiplicar":
+        multiplicar(a,b)
         break
     case "dividir":
+        return dividir(a,b)
         break
     default:
         break;
