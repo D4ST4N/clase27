@@ -4,7 +4,7 @@ const resta=require('./restar')
 const suma= require('./sumar')
 const {argv} =process 
 function calculadora(comando,a,b){
-switch (comando) {
+switch (comando.toLowerCase()) {
     case "sumar":
         suma(a,b)
         break;
